@@ -1,7 +1,33 @@
 main {
+  @include FlexColumn;
   @include ParentCenterElement;
-  @include Size(900px, 600px);
   @include Shadow;
+  @include Size(50%, 600px);
+  @include Padding(10px);
+  @include ParentPosition;
   background: $white;
   border: 1px solid $grey;
+  margin-bottom: 50px;
+  
+  h1 {
+    @include Padding(20px);
+    text-align: center;
+    width: 100%;
+    @include ParentPosition;
+  }
+}
+// 
+main#flexInline {
+  @include Flex;
+  
+  div.square {
+    @include Size(22%);
+    background: $safran;    
+    margin-right: 20px;
+    &:nth-of-type(4n) {
+      margin-right:0;
+    }
+    
+  }
+
 }

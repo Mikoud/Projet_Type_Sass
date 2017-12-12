@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow:300,300i,400');
 
 i {
-  padding: 2px 3px;
-  background-color: $antracite;
+  @include Padding(2px);
+  background-color: $safran;
+  color: $white;
   font-style: italic;
+  font-weight: bold;
 }

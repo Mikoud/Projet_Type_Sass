@@ -1,4 +1,5 @@
 body {
-  font-family: 'Barlow', sans-serif;
   @include ParentCenterElement;
+  @include FlexColumn;
+  font-family: 'Barlow', sans-serif;
 }

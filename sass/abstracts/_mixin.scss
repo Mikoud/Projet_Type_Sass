@@ -5,6 +5,12 @@
   flex-wrap: wrap;
   flex-direction: row;
 }
+@mixin FlexColumn {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
 
 /*Center an element, the mixins will be to apply in the parent*/
 @mixin ParentCenterElement {
@@ -66,7 +72,7 @@
 }
 
 /* 3- Margin & Padding*/ 
-@mixin padding($padding) {
+@mixin Padding($padding) {
   padding: $padding;
 }
 

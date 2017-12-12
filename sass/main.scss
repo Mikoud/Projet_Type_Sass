@@ -1,0 +1,16 @@
+/* L'ordre des fichiers est très importants, il se peut 
+que l'ordre des fichiers créer une incohérence dans le rendu final.
+Il faut absolument faire attention à cela. */
+
+@import "base/reset.scss";
+//Abstracts
+@import "abstracts/colors.scss";
+@import "abstracts/typographie.scss";
+@import "abstracts/variable.scss";
+@import "abstracts/_mixin.scss";
+//Layouts
+@import "layout/body.scss";
+@import "layout/header.scss";
+@import "layout/main_content.scss";
+@import "layout/footer.scss";
+@import "layout/_mediaquerie.scss";

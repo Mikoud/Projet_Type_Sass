@@ -1,0 +1,5 @@
+body {
+  background-color: $vanilla_brown;
+  font-family: 'Barlow', sans-serif;
+  @include ParentCenterElement;
+}

@@ -1,0 +1,125 @@
+/*1- ELEMENT POSITION*/
+
+@mixin Flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/*Center an element, the mixins will be to apply in the parent*/
+@mixin ParentCenterElement {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+/*Center an element, with Translate 50% - 50%*/
+@mixin ChildCenterTransform {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/*Elements position relative & absolute*/
+@mixin ParentPosition {
+  bottom: 0;
+  left: 0;
+  position: relative;
+  right: 0;
+  top:0;
+}
+
+@mixin ChildPosition {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top:0;
+}
+/*2- Image*/ 
+
+@mixin BackgroundImage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: auto;
+  width: auto;
+}
+
+/*Pseudo elements */
+@mixin PseudoElement($content: '', $display: block, $pos: absolute) {
+  content:  $content;
+  display:  $display;
+  position: $pos;
+} 
+
+/*Dimension a box*/ 
+@mixin Size($width, $height: $width){
+  height: $height;
+  width: $width;
+}
+
+/*Shadow Elements*/ 
+@mixin Shadow{
+  box-shadow: 0 6px 8px 1px rgba(209,207,207,0.50);
+}
+
+/* 3- Margin & Padding*/ 
+@mixin PaddingAll($padding) {
+  padding: $padding;
+}
+
+@mixin Padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+@mixin Margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Mediquaeries http://w3bits.com/sass-mixins/*/ 
+@mixin screen($size) {
+
+  @if $size == desktop {
+    @media only screen and #{$desktop} {
+      @content;
+    }
+  }
+  @else if $size == tablet {
+    @media only screen and #{$tablet} {
+      @content;
+    }
+  }
+  @else if $size == mobile {
+    @media only screen and #{$mobile} {
+      @content;
+    }
+  }
+  @else {
+    @media only screen and #{$size} {
+      @content;
+    }
+  }
+}

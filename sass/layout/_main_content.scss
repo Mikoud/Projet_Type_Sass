@@ -1,0 +1,39 @@
+div#wrapper {
+  background: $dove_gray;
+  @include Size(80%);
+
+  section {
+    @include Size(100%, 60%);
+    background: $stack;
+  }
+
+  main {
+    // background: $white;
+    @include Size(100%, 37%);
+    background: green;
+    @include Flex;
+    
+    h3 {
+    //font-size: $h3;
+    width: 100%;
+    }
+    
+    div {
+      @include PaddingAll(100px 80px);
+      background: $white;
+      height: 100%;
+      width: 23%;
+      align-items: center;
+
+      h2 {
+        color: $antracite;
+        font-size: 2em;
+        @include PaddingAll(15px 0);
+      }
+      p {
+        color:$grey;
+      }
+    }
+  }
+}
+

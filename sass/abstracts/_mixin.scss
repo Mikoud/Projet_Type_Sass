@@ -66,23 +66,9 @@
 }
 
 /* 3- Margin & Padding*/ 
-@mixin PaddingAll($padding) {
+@mixin padding($padding) {
   padding: $padding;
 }
-
-@mixin Padding($top, $right, $bottom, $left) {
-  padding-top: $top;
-  padding-right: $right;
-  padding-bottom: $bottom;
-  padding-left: $left;
-}
-@mixin Margin($top, $right, $bottom, $left) {
-  margin-top: $top;
-  margin-right: $right;
-  margin-bottom: $bottom;
-  margin-left: $left;
-}
-
 
 
 

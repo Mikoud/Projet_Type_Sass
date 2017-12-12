@@ -108,14 +108,7 @@ strong {
   height: 0;
 }
 
-i {
-  padding: 2px 3px;
-  background: red;
-  font-style: italic;
-}
-
 /*Colours*/
-/*Size Elements*/
 /*Position & Pseudo Elements*/
 /*Mobile, Tablette, Desktop*/
 /*1- ELEMENT POSITION*/
@@ -128,6 +121,12 @@ i {
 /*Shadow Elements*/
 /* 3- Margin & Padding*/
 /*Mediquaeries http://w3bits.com/sass-mixins/*/
+i {
+  padding: 2px 3px;
+  background-color: #252525;
+  font-style: italic;
+}
+
 body {
   font-family: 'Barlow', sans-serif;
   align-items: center;

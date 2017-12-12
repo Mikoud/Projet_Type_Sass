@@ -4,10 +4,11 @@ Il faut absolument faire attention à cela. */
 
 @import "base/reset.scss";
 //Abstracts
-@import "abstracts/colors.scss";
-@import "abstracts/typographie.scss";
 @import "abstracts/variable.scss";
 @import "abstracts/_mixin.scss";
+@import "abstracts/colors.scss";
+@import "abstracts/typographie.scss";
+
 //Layouts
 @import "layout/body.scss";
 @import "layout/header.scss";

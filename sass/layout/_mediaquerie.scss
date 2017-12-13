@@ -1,18 +1,29 @@
 /*Mediaquerie for Tablet 
 $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
 
-
 @media #{$desktop} {
   .menu {
     height: auto;
+
     nav {
+      background: none;
       @include Size (100%, auto);
+      ul {
+        a {
+          color: $safran_dark;
+          &:hover {
+            margin-left: 20px;
+            transition: .5s;
+          }
+        }
+      }
     }
     section {
-      @include Size (100%, auto);
+      @include Size(100%, auto);
     }
   }
 }
+
 @media #{$tablet} {
   main {
     @include Size(80%, 60%);

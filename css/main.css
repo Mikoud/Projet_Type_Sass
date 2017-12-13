@@ -153,7 +153,7 @@ header {
 }
 
 /* Elements who have the sames property in css3*/
-main, .Menu, nav {
+main, .menu, nav {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -175,7 +175,7 @@ h1, ul, a {
   width: 100%;
 }
 
-nav, .square {
+.square {
   background: #F8BB2C;
 }
 
@@ -222,23 +222,22 @@ main.flexInline img {
 
 main.flexInline article {
   background-size: cover;
-  background-repeat: no-repeat;
   height: calc(100% - 56px);
   width: calc(100% - 56px);
   background: url("../img/alone.jpg") center center;
 }
 
 /* Cards Menu */
-.Menu {
+.menu {
   justify-content: left;
 }
 
-.Menu nav {
+.menu nav {
   height: 100%;
   width: 30%;
 }
 
-.Menu nav ul li {
+.menu nav ul li {
   margin-top: 0;
   margin-bottom: 20px;
   margin-left: 0;
@@ -246,29 +245,30 @@ main.flexInline article {
   line-height: 1.5;
 }
 
-.Menu nav ul a {
+.menu nav ul a {
   color: #252525;
   display: inline-block;
 }
 
-.Menu nav ul a:hover {
+.menu nav ul a:hover {
+  color: #F8BB2C;
   margin-left: 20px;
   transition: .5s;
 }
 
-.Menu section {
+.menu section {
   padding: 10px;
   align-self: flex-start;
   height: 100%;
   width: calc(100% - 30%);
 }
 
-.Menu section p {
+.menu section p {
   line-height: 20px;
   padding-bottom: 10px;
 }
 
-.Menu section img {
+.menu section img {
   margin-top: 0;
   margin-bottom: 20px;
   margin-left: 0;
@@ -276,6 +276,76 @@ main.flexInline article {
   height: 300px;
   width: 100%;
   object-fit: cover;
+}
+
+/*Mediaquerie for Tablet 
+$tablet: "(min-width: 768px) and (max-width: 1024px)"*/
+@media (min-width: 1024px) and (max-width: 1690px) {
+  .menu {
+    height: auto;
+  }
+  .menu nav {
+    height: auto;
+    width: 100%;
+  }
+  .menu section {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  main {
+    height: 60%;
+    width: 80%;
+  }
+  .menu nav {
+    height: auto;
+    width: 100%;
+  }
+  .menu section {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/*Mediaquerie for Mobile $mobile:
+ "(min-width: 300px) and (max-width: 768px)"*/
+@media (min-width: 300px) and (max-width: 768px) {
+  main {
+    height: auto;
+    width: 90%;
+  }
+  main h1 {
+    font-size: 1em;
+  }
+  /* Card position inline on flexbox */
+  main.flexInline {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  main.flexInline div.square {
+    height: 20%;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+  main.flexInline article {
+    height: 300px;
+    width: 100%;
+    background: url("../img/alone.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  /* Cards Menu */
+  .menu nav {
+    height: auto;
+    width: 100%;
+  }
+  .menu section {
+    height: auto;
+    width: 100%;
+  }
 }
  
 

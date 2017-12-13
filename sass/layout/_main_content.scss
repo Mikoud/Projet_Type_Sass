@@ -1,5 +1,5 @@
 /* Elements who have the sames property in css3*/ 
-main, .Menu, nav {
+main, .menu, nav {
   @include FlexColumn;
 }
 
@@ -15,7 +15,7 @@ h1, ul, a {
   width:100%;
 }
 
-nav, .square {
+.square {
   background: $safran;  
 }
 
@@ -58,7 +58,7 @@ main.flexInline {
 
 
 /* Cards Menu */ 
-.Menu {
+.menu {
   justify-content: left;
 
   nav {
@@ -73,6 +73,7 @@ main.flexInline {
         color:$antracite;
         display: inline-block;
       &:hover {
+          color:$safran;
           margin-left: 20px;
           transition: .5s;
         }

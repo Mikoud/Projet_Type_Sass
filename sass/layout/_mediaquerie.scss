@@ -1,0 +1,66 @@
+/*Mediaquerie for Tablet 
+$tablet: "(min-width: 768px) and (max-width: 1024px)"*/
+
+
+@media #{$desktop} {
+  .menu {
+    height: auto;
+    nav {
+      @include Size (100%, auto);
+    }
+    section {
+      @include Size (100%, auto);
+    }
+  }
+}
+@media #{$tablet} {
+  main {
+    @include Size(80%, 60%);
+  }
+  .menu {
+    nav {
+      @include Size (100%, auto);
+    }
+    section {
+      @include Size (100%, auto);
+    }
+  }
+}
+
+
+/*Mediaquerie for Mobile $mobile:
+ "(min-width: 300px) and (max-width: 768px)"*/
+
+@media #{$mobile} {
+  main {
+    @include Size(90%, auto);
+    h1 {
+      font-size: 1em;
+    }
+  }
+  /* Card position inline on flexbox */
+  main.flexInline {
+    @include FlexColumn;
+    div.square {
+      @include Size(100%, 20%);
+      @include Margin(null, 20px, null, null);
+      margin-right: 0;
+    }
+    article {
+      @include Size (100%, 300px);
+      background: url("../img/alone.jpg")no-repeat center center;
+      @include BackgroundImage;
+    }
+  }
+  /* Cards Menu */
+  .menu {
+    nav {
+      @include Size (100%,
+      auto);
+    }
+    section {
+      @include Size (100%,
+      auto);
+    }
+  }
+}

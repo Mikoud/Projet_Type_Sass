@@ -19,17 +19,11 @@ nav, .square {
   background: $safran;  
 }
 
-
-
-
-
-
 /* Card position Column on Flexbox */ 
 main {
-  
   @include ParentCenterElement;
   @include Shadow;
-  @include Size(50%, 600px);
+  @include Size(50%, 60%);
   background: $white;
   border: 1px solid $grey;
   margin-bottom: 50px;
@@ -99,6 +93,7 @@ main.flexInline {
     img {
       @include Margin (0, 20px, 0, 0);
       @include Size (100%, 300px);
+      object-fit: cover;
     }
   }
 }

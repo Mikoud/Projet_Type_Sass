@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow:300,300i,400');
 
+h1 {
+  color: $dove_gray; 
+  font-size: 1.3em;
+  font-weight: bold;
+}
 i {
   @include Padding(2px);
   background-color: $safran;

@@ -108,7 +108,6 @@ strong {
   height: 0;
 }
 
-/*Colours*/
 /*Position & Pseudo Elements*/
 /*Mobile, Tablette, Desktop*/
 /*1- ELEMENT POSITION*/
@@ -121,6 +120,13 @@ strong {
 /*Shadow Elements*/
 /* 3- Margin & Padding*/
 /*Mediquaeries http://w3bits.com/sass-mixins/*/
+/*Colours*/
+h1 {
+  color: #726D6E;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
 i {
   padding: 2px;
   background-color: #F8BB2C;
@@ -130,12 +136,13 @@ i {
 }
 
 body {
-  align-items: center;
-  display: flex;
-  justify-content: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   font-family: 'Barlow', sans-serif;
 }
 
@@ -145,6 +152,7 @@ header {
   width: 100%;
 }
 
+/* Card position Column on Flexbox */
 main {
   display: flex;
   flex-wrap: wrap;
@@ -168,15 +176,16 @@ main {
 
 main h1 {
   padding: 20px;
-  text-align: center;
-  width: 100%;
   bottom: 0;
   left: 0;
   position: relative;
   right: 0;
   top: 0;
+  text-align: center;
+  width: 100%;
 }
 
+/* Card position inline on flexbox */
 main.flexInline {
   display: flex;
   flex-wrap: wrap;
@@ -205,6 +214,69 @@ main.flexInline article {
   height: calc(100% - 56px);
   width: calc(100% - 56px);
   background: url("../img/alone.jpg") center center;
+}
+
+/* Cards Menu */
+.Menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.Menu nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+  background: #F8BB2C;
+}
+
+.Menu nav ul {
+  width: 100%;
+}
+
+.Menu nav ul li {
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.Menu nav ul a {
+  padding: 10px;
+  color: #252525;
+  display: inline-block;
+  width: 100%;
+}
+
+.Menu nav ul a:hover {
+  margin-left: 20px;
+  transition: .5s;
+}
+
+.Menu section {
+  padding: 10px;
+  align-self: flex-start;
+  height: 100%;
+  width: calc(100% - 30%);
+}
+
+.Menu section p {
+  line-height: 20px;
+  padding-bottom: 10px;
+}
+
+.Menu section img {
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  height: 300px;
+  width: 100%;
 }
  
 

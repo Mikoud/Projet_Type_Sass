@@ -1,3 +1,4 @@
+/* Card position Column on Flexbox */ 
 main {
   @include FlexColumn;
   @include ParentCenterElement;
@@ -11,12 +12,12 @@ main {
   
   h1 {
     @include Padding(20px);
+    @include ParentPosition;
     text-align: center;
     width: 100%;
-    @include ParentPosition;
   }
 }
-// 
+/* Card position inline on flexbox */ 
 main.flexInline {
   @include Flex;
   
@@ -29,7 +30,6 @@ main.flexInline {
       margin-right:0;
     }
   }
-
   img {
     @include Size(100%, auto);
   }
@@ -37,5 +37,56 @@ main.flexInline {
     @include BackgroundImage;
     @include Size (calc(100% - 56px));
     background: url("../img/alone.jpg")center center;
+  }
+}
+
+
+/* Cards Menu */ 
+.Menu {
+  @include FlexColumn;
+  justify-content: left;
+
+  nav {
+    @include FlexColumn;
+    @include Size (30%, 100%);
+    background: $safran;
+
+    ul {
+      width: 100%;
+
+      li {
+        @include Margin (0, 20px, 0, 0);
+        line-height: 1.5;
+        width: 100%;
+        
+      }
+      a {
+        @include Padding(10px);
+        color:$antracite;
+        display: inline-block;
+        width: 100%;
+
+      &:hover {
+          margin-left: 20px;
+          transition: .5s;
+        }
+      }
+    }
+  }
+  section {
+    @include Padding(10px);
+    align-self:  flex-start;
+    height: 100%;
+    width: calc(100% - 30%);
+    
+    p {
+      line-height: 20px;
+      padding-bottom: 10px;
+    }
+
+    img {
+      @include Margin (0, 20px, 0, 0);
+      @include Size (100%, 300px);
+    }
   }
 }

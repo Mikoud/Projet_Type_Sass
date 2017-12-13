@@ -1,5 +1,6 @@
 body {
-  @include ParentCenterElement;
   @include FlexColumn;
+  @include Margin(20px, null, null, null);
+  @include ParentCenterElement;
   font-family: 'Barlow', sans-serif;
 }

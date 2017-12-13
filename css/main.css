@@ -177,21 +177,34 @@ main h1 {
   top: 0;
 }
 
-main#flexInline {
+main.flexInline {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
 
-main#flexInline div.square {
+main.flexInline div.square {
   height: 22%;
   width: 22%;
   background: #F8BB2C;
   margin-right: 20px;
 }
 
-main#flexInline div.square:nth-of-type(4n) {
+main.flexInline div.square:nth-of-type(4n) {
   margin-right: 0;
+}
+
+main.flexInline img {
+  height: auto;
+  width: 100%;
+}
+
+main.flexInline article {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100% - 56px);
+  width: calc(100% - 56px);
+  background: url("../img/alone.jpg") center center;
 }
  
 

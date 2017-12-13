@@ -17,17 +17,25 @@ main {
   }
 }
 // 
-main#flexInline {
+main.flexInline {
   @include Flex;
   
   div.square {
     @include Size(22%);
-    background: $safran;    
+    background: $safran;
     margin-right: 20px;
+
     &:nth-of-type(4n) {
       margin-right:0;
     }
-    
   }
 
+  img {
+    @include Size(100%, auto);
+  }
+  article {
+    @include BackgroundImage;
+    @include Size (calc(100% - 56px));
+    background: url("../img/alone.jpg")center center;
+  }
 }

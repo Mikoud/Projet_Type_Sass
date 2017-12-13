@@ -1,18 +1,41 @@
+/* Elements who have the sames property in css3*/ 
+main, .Menu, nav {
+  @include FlexColumn;
+}
+
+main, section, a{
+  @include Padding(10px);  
+}
+
+main, h1 {
+  @include ParentPosition;
+}
+
+h1, ul, a {
+  width:100%;
+}
+
+nav, .square {
+  background: $safran;  
+}
+
+
+
+
+
+
 /* Card position Column on Flexbox */ 
 main {
-  @include FlexColumn;
+  
   @include ParentCenterElement;
   @include Shadow;
   @include Size(50%, 600px);
-  @include Padding(10px);
-  @include ParentPosition;
   background: $white;
   border: 1px solid $grey;
   margin-bottom: 50px;
   
   h1 {
     @include Padding(20px);
-    @include ParentPosition;
     text-align: center;
     width: 100%;
   }
@@ -23,7 +46,6 @@ main.flexInline {
   
   div.square {
     @include Size(22%);
-    background: $safran;
     margin-right: 20px;
 
     &:nth-of-type(4n) {
@@ -43,29 +65,19 @@ main.flexInline {
 
 /* Cards Menu */ 
 .Menu {
-  @include FlexColumn;
   justify-content: left;
 
   nav {
-    @include FlexColumn;
     @include Size (30%, 100%);
-    background: $safran;
 
     ul {
-      width: 100%;
-
       li {
         @include Margin (0, 20px, 0, 0);
-        line-height: 1.5;
-        width: 100%;
-        
+        line-height: 1.5;        
       }
       a {
-        @include Padding(10px);
         color:$antracite;
         display: inline-block;
-        width: 100%;
-
       &:hover {
           margin-left: 20px;
           transition: .5s;
@@ -75,7 +87,7 @@ main.flexInline {
   }
   section {
     @include Padding(10px);
-    align-self:  flex-start;
+    align-self: flex-start;
     height: 100%;
     width: calc(100% - 30%);
     

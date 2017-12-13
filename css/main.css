@@ -152,23 +152,41 @@ header {
   width: 100%;
 }
 
-/* Card position Column on Flexbox */
-main {
+/* Elements who have the sames property in css3*/
+main, .Menu, nav {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+}
+
+main, section, a {
+  padding: 10px;
+}
+
+main, h1 {
+  bottom: 0;
+  left: 0;
+  position: relative;
+  right: 0;
+  top: 0;
+}
+
+h1, ul, a {
+  width: 100%;
+}
+
+nav, .square {
+  background: #F8BB2C;
+}
+
+/* Card position Column on Flexbox */
+main {
   align-items: center;
   display: flex;
   justify-content: center;
   box-shadow: 0 6px 8px 1px rgba(209, 207, 207, 0.5);
   height: 600px;
   width: 50%;
-  padding: 10px;
-  bottom: 0;
-  left: 0;
-  position: relative;
-  right: 0;
-  top: 0;
   background: #FFFFFF;
   border: 1px solid #f5f5f5;
   margin-bottom: 50px;
@@ -176,11 +194,6 @@ main {
 
 main h1 {
   padding: 20px;
-  bottom: 0;
-  left: 0;
-  position: relative;
-  right: 0;
-  top: 0;
   text-align: center;
   width: 100%;
 }
@@ -195,7 +208,6 @@ main.flexInline {
 main.flexInline div.square {
   height: 22%;
   width: 22%;
-  background: #F8BB2C;
   margin-right: 20px;
 }
 
@@ -218,23 +230,12 @@ main.flexInline article {
 
 /* Cards Menu */
 .Menu {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   justify-content: left;
 }
 
 .Menu nav {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   height: 100%;
   width: 30%;
-  background: #F8BB2C;
-}
-
-.Menu nav ul {
-  width: 100%;
 }
 
 .Menu nav ul li {
@@ -243,14 +244,11 @@ main.flexInline article {
   margin-left: 0;
   margin-right: 0;
   line-height: 1.5;
-  width: 100%;
 }
 
 .Menu nav ul a {
-  padding: 10px;
   color: #252525;
   display: inline-block;
-  width: 100%;
 }
 
 .Menu nav ul a:hover {

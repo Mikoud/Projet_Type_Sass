@@ -136,12 +136,24 @@ i {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin-top: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-family: 'Barlow', sans-serif;
 }
@@ -154,8 +166,14 @@ header {
 
 /* Elements who have the sames property in css3*/
 main, .menu, nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -181,8 +199,14 @@ nav, .square {
 
 /* Card position Column on Flexbox */
 main {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   box-shadow: 0 6px 8px 1px rgba(209, 207, 207, 0.5);
   height: auto;
@@ -200,14 +224,21 @@ main h1 {
 
 /* Card position inline on flexbox */
 main.flexInline {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 main.flexInline div.square {
   height: 22%;
   width: 22%;
+  margin-bottom: 20px;
   margin-right: 20px;
 }
 
@@ -280,12 +311,9 @@ main.flexInline article {
 /*Mediaquerie for Tablet 
 $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
 @media (min-width: 1040px) {
-  body {
-    background: #282C34;
-  }
   body:before {
     content: "Desktop";
-    color: #FFFFFF;
+    color: #252525;
     margin-bottom: 20px;
   }
   .menu {
@@ -322,8 +350,14 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
     width: 90%;
   }
   main.flexInline {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   main.flexInline div.square {
@@ -367,8 +401,14 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
   }
   /* Card position inline on flexbox */
   main.flexInline {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   main.flexInline div.square {

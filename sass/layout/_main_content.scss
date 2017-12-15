@@ -23,7 +23,7 @@ nav, .square {
 main {
   @include ParentCenterElement;
   @include Shadow;
-  @include Size(50%, 60%);
+  @include Size(90%, auto);
   background: $white;
   border: 1px solid $grey;
   margin-bottom: 50px;
@@ -50,9 +50,9 @@ main.flexInline {
     @include Size(100%, auto);
   }
   article {
-    @include BackgroundImage;
     @include Size (calc(100% - 56px));
     background: url("../img/alone.jpg")center center;
+    @include BackgroundImage;
   }
 }
 
@@ -92,7 +92,7 @@ main.flexInline {
 
     img {
       @include Margin (0, 20px, 0, 0);
-      @include Size (100%, 300px);
+      @include Size (100%, 60%);
       object-fit: cover;
     }
   }

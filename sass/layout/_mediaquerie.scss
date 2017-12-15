@@ -2,6 +2,14 @@
 $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
 
 @media #{$desktop} {
+  body {
+    background: #282C34;
+    &:before {
+      content: "Desktop";
+      color: $white;
+      @include Margin(null, 20px, null, null);
+    }
+  }
   .menu {
     height: auto;
 
@@ -24,9 +32,35 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
   }
 }
 
+
+
+
+
+
 @media #{$tablet} {
+  body {
+    background: #E06C75;
+    &:before {
+      content: "Tablet";
+      @include Margin(null, 20px, null, null);
+    }
+  }
   main {
-    @include Size(80%, 60%);
+    @include Size(90%, auto);
+  }
+  main.flexInline {
+    @include FlexColumn;
+    div.square {
+      @include Size(100%, 20%);
+      @include Margin(null, 20px, null, null);
+      margin-right: 0;
+    }
+    article {
+      height: calc(100% - 56px);
+      width: calc(100% - 56px);
+      background: url(../img/alone.jpg) center center;
+      background-size: cover;
+    }
   }
   .menu {
     nav {
@@ -39,10 +73,21 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
 }
 
 
+
+
+
+
 /*Mediaquerie for Mobile $mobile:
  "(min-width: 300px) and (max-width: 768px)"*/
 
 @media #{$mobile} {
+  body {
+    background: #61AFEF;
+    &:before {
+      content: "Mobile";
+      @include Margin(null, 20px, null, null);
+    }
+  }
   main {
     @include Size(90%, auto);
     h1 {

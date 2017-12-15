@@ -185,8 +185,8 @@ main {
   display: flex;
   justify-content: center;
   box-shadow: 0 6px 8px 1px rgba(209, 207, 207, 0.5);
-  height: 60%;
-  width: 50%;
+  height: auto;
+  width: 90%;
   background: #FFFFFF;
   border: 1px solid #f5f5f5;
   margin-bottom: 50px;
@@ -221,10 +221,10 @@ main.flexInline img {
 }
 
 main.flexInline article {
-  background-size: cover;
   height: calc(100% - 56px);
   width: calc(100% - 56px);
   background: url("../img/alone.jpg") center center;
+  background-size: cover;
 }
 
 /* Cards Menu */
@@ -272,14 +272,22 @@ main.flexInline article {
   margin-bottom: 20px;
   margin-left: 0;
   margin-right: 0;
-  height: 300px;
+  height: 60%;
   width: 100%;
   object-fit: cover;
 }
 
 /*Mediaquerie for Tablet 
 $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
-@media (min-width: 1040px) and (max-width: 1690px) {
+@media (min-width: 1040px) {
+  body {
+    background: #282C34;
+  }
+  body:before {
+    content: "Desktop";
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
   .menu {
     height: auto;
   }
@@ -302,9 +310,33 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
 }
 
 @media (min-width: 768px) and (max-width: 1040px) {
+  body {
+    background: #E06C75;
+  }
+  body:before {
+    content: "Tablet";
+    margin-bottom: 20px;
+  }
   main {
-    height: 60%;
-    width: 80%;
+    height: auto;
+    width: 90%;
+  }
+  main.flexInline {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  main.flexInline div.square {
+    height: 20%;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+  main.flexInline article {
+    height: calc(100% - 56px);
+    width: calc(100% - 56px);
+    background: url(../img/alone.jpg) center center;
+    background-size: cover;
   }
   .menu nav {
     height: auto;
@@ -319,6 +351,13 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
 /*Mediaquerie for Mobile $mobile:
  "(min-width: 300px) and (max-width: 768px)"*/
 @media (min-width: 300px) and (max-width: 768px) {
+  body {
+    background: #61AFEF;
+  }
+  body:before {
+    content: "Mobile";
+    margin-bottom: 20px;
+  }
   main {
     height: auto;
     width: 90%;

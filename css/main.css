@@ -29,10 +29,13 @@ time, mark, audio, video {
 
 * {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+*::-moz-selection {
+  color: #ff006f;
 }
 
 *::selection {
@@ -136,25 +139,9 @@ i {
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  height: 100%;
+  width: 100%;
   margin-top: 20px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   font-family: 'Barlow', sans-serif;
 }
 
@@ -170,11 +157,11 @@ main, .menu, nav {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main, section, a {
@@ -197,23 +184,29 @@ nav, .square {
   background: #F8BB2C;
 }
 
+main.Flexline.menu {
+  height: auto;
+}
+
 /* Card position Column on Flexbox */
 main {
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-shadow: 0 6px 8px 1px rgba(209, 207, 207, 0.5);
-  height: auto;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 6px 8px 1px rgba(209, 207, 207, 0.5);
+          box-shadow: 0 6px 8px 1px rgba(209, 207, 207, 0.5);
   width: 90%;
   background: #FFFFFF;
   border: 1px solid #f5f5f5;
   margin-bottom: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 main h1 {
@@ -225,21 +218,21 @@ main h1 {
 /* Card position inline on flexbox */
 main.flexInline {
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: auto;
+  width: 90%;
 }
 
 main.flexInline div.square {
-  height: 22%;
-  width: 22%;
+  height: 20%;
+  width: 20%;
   margin-bottom: 20px;
   margin-right: 20px;
 }
@@ -262,7 +255,11 @@ main.flexInline article {
 
 /* Cards Menu */
 .menu {
-  justify-content: left;
+  height: auto;
+  width: 0;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 .menu nav {
@@ -285,12 +282,14 @@ main.flexInline article {
 
 .menu nav ul a:hover {
   margin-left: 20px;
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
 .menu section {
   padding: 10px;
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   height: 100%;
   width: calc(100% - 30%);
 }
@@ -307,16 +306,20 @@ main.flexInline article {
   margin-right: 0;
   height: 60%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*Mediaquerie for Tablet 
 $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
 @media (min-width: 1040px) {
   body:before {
-    content: "Desktop";
-    color: #252525;
     margin-bottom: 20px;
+    color: #252525;
+    content: "Desktop";
+    display: block;
+    text-align: center;
+    width: 100%;
   }
   .menu {
     height: auto;
@@ -331,6 +334,7 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
   }
   .menu nav ul a:hover {
     margin-left: 20px;
+    -webkit-transition: .5s;
     transition: .5s;
   }
   .menu section {
@@ -346,21 +350,13 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
   body:before {
     content: "Tablet";
     margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    width: 100%;
   }
   main {
     height: auto;
     width: 90%;
-  }
-  main.flexInline {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
   }
   main.flexInline div.square {
     height: 20%;
@@ -393,6 +389,9 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
   body:before {
     content: "Mobile";
     margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    width: 100%;
   }
   main {
     height: auto;
@@ -402,17 +401,6 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
     font-size: 1em;
   }
   /* Card position inline on flexbox */
-  main.flexInline {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
   main.flexInline div.square {
     height: 20%;
     width: 100%;

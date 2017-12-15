@@ -1,6 +1,6 @@
 /* Elements who have the sames property in css3*/ 
 main, .menu, nav {
-  @include FlexColumn;
+@include FlexColumn;
 }
 
 main, section, a{
@@ -19,14 +19,19 @@ nav, .square {
   background: $safran;  
 }
 
+main.Flexline.menu {
+  height: auto;
+}
 /* Card position Column on Flexbox */ 
 main {
   @include ParentCenterElement;
   @include Shadow;
-  @include Size(90%, auto);
+  @include Size(90%, null);
   background: $white;
   border: 1px solid $grey;
   margin-bottom: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
   
   h1 {
     @include Padding(20px);
@@ -37,15 +42,17 @@ main {
 /* Card position inline on flexbox */ 
 main.flexInline {
   @include Flex;
-  
+  @include Size(90%, auto);
+
   div.square {
-    @include Size(22%);
+    @include Size(20%);
     @include Margin(null, 20px, null, 20px)
 
     &:nth-of-type(4n) {
       margin-right:0;
     }
   }
+
   img {
     @include Size(100%, auto);
   }
@@ -59,6 +66,7 @@ main.flexInline {
 
 /* Cards Menu */ 
 .menu {
+  @include Size (0, auto)
   justify-content: left;
 
   nav {

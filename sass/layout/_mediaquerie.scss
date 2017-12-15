@@ -4,9 +4,12 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
 @media #{$desktop} {
   body {
     &:before {
-      content: "Desktop";
-      color: $antracite;
       @include Margin(null, 20px, null, null);
+      color: $antracite;
+      content: "Desktop";
+      display: block;
+      text-align: center;
+      width: 100%;
     }
   }
   .menu {
@@ -42,13 +45,15 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
     &:before {
       content: "Tablet";
       @include Margin(null, 20px, null, null);
+      display: block;
+      text-align: center;
+      width: 100%;
     }
   }
   main {
     @include Size(90%, auto);
   }
   main.flexInline {
-    @include FlexColumn;
     div.square {
       @include Size(100%, 20%);
       @include Margin(null, 20px, null, null);
@@ -85,6 +90,9 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
     &:before {
       content: "Mobile";
       @include Margin(null, 20px, null, null);
+      display: block;
+      text-align: center;
+      width: 100%;
     }
   }
   main {
@@ -95,7 +103,7 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
   }
   /* Card position inline on flexbox */
   main.flexInline {
-    @include FlexColumn;
+    //@include FlexColumn;
     div.square {
       @include Size(100%, 20%);
       @include Margin(null, 20px, null, null);

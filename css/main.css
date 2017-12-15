@@ -225,7 +225,9 @@ main h1 {
 /* Card position inline on flexbox */
 main.flexInline {
   display: -webkit-box;
+  display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;

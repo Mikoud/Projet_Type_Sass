@@ -1,5 +1,6 @@
 /* Elements who have the sames property in css3*/ 
-main, .menu, nav {
+main, .menu, nav,
+section {
 @include FlexColumn;
 }
 
@@ -42,10 +43,10 @@ main {
 /* Card position inline on flexbox */ 
 main.flexInline {
   @include Flex;
-  @include Size(90%, auto);
+  @include Size(90%, 100%);
 
   div.square {
-    @include Size(20%);
+    @include Size(250px, 200px);
     @include Margin(null, 20px, null, 20px)
 
     &:nth-of-type(4n) {
@@ -57,7 +58,7 @@ main.flexInline {
     @include Size(100%, auto);
   }
   article {
-    @include Size (calc(100% - 56px));
+    @include Size (calc(100% - 55px));
     background: url("../img/alone.jpg")center center;
     @include BackgroundImage;
   }
@@ -66,7 +67,7 @@ main.flexInline {
 
 /* Cards Menu */ 
 .menu {
-  @include Size (0, auto)
+  @include Size (90%, auto)
   justify-content: left;
 
   nav {

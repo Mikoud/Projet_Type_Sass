@@ -5,6 +5,11 @@ h1 {
   font-size: 1.3em;
   font-weight: bold;
 }
+h2 {
+  color: $white; 
+  font-size: 1.4em;
+  font-weight: bold;
+}
 i {
   @include Padding(2px);
   background-color: $safran;

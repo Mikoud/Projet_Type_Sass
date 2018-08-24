@@ -337,7 +337,7 @@ $tablet: "(min-width: 768px) and (max-width: 1024px)"*/
     width: 100%;
   }
   .menu nav ul a {
-    color: #e9a51d;
+    color: #ffaa00;
   }
   .menu nav ul a:hover {
     margin-left: 20px;

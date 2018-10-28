@@ -26,7 +26,7 @@ main.Flexline.menu {
 /* Card position Column on Flexbox */ 
 main {
   @include ParentCenterElement;
-  @include Shadow;
+  //@include Shadow;
   @include Size(90%, null);
   background: $white;
   border: 1px solid $grey;

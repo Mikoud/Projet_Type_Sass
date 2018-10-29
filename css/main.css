@@ -221,6 +221,13 @@ main h1 {
   width: 100%;
 }
 
+main ul li {
+  color: #595F71;
+  line-height: 1.5;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
 /* Card position inline on flexbox */
 main.flexInline {
   display: -webkit-box;

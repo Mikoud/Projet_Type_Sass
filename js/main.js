@@ -51,3 +51,77 @@ var name = "Martin";
 salut += " " + name;
 
 console.log(salut);
+
+
+// var name =" Laurianne ";
+// var age = 34;
+
+// var resultat =" Bonjour " + name + " tu as " + age + " ! ";
+
+// console.log(resultat);
+
+// .length calcule le nombe de caractère. On part toujours de 0. 
+
+// var name = "Laurianne";
+
+// name [name.length - 1 ] = "a"
+
+// name = "Laurianna"; 
+
+// console.log(name);
+/*
+En javacript les chaines de caractères sont immutable elle ne peuvent être changée.
+Changement de lettre par une autre.
+*/
+
+// var name = "Marise"
+// var age = "30"
+
+// var stats = ["attacks", "défense"];
+// var array = [name, age, stats];
+
+// array[0]= "Martin"; 
+// array[2][1] = "bouclier";
+
+// console.log(array[2]);
+
+// var arr = [1, 2, 3];
+
+// arr.push("Je bosse du Js");
+// //.push est une méthode pour ajouter des éléments dans un tableau déja créer. 
+
+// arr.pop();
+// // .pop est une méthode qui supprime la dernière entrée dans le tableau
+
+// var pop = arr.pop();
+// //.pop peut etre mis dans une variable afin de réutiliser la methode donc de sauvegarder la valeur et de l'ajouter à nouveau.
+
+// arr.push(pop);
+// //.push(pop) ajoute la valeur dans le tableau à nouveau.
+
+// console.log(arr);
+// console.log(pop);
+
+// Version Mike
+// var firstName = "Mike";
+// var name = "Ketfi";
+// var resultat = [ firstName, name];
+
+// resultat.push("MK");
+
+// console.log(resultat);
+
+
+// Version Cours
+
+var firstName = "Mike";
+var name = "Ketfi";
+var initiale = firstName[0] + name [0];
+
+var resultat = [];
+
+resultat.push(firstName);
+resultat.push(name);
+resultat.push(initiale);
+
+console.log(resultat);

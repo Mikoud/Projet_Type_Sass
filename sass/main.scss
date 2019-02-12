@@ -10,8 +10,8 @@ Il faut absolument faire attention à cela. */
 @import "abstracts/typographie.scss";
 
 //Layouts
-@import "layout/body.scss";
-@import "layout/header.scss";
-@import "layout/main_content.scss";
-@import "layout/footer.scss";
+@import "layout/_body.scss";
+@import "layout/_header.scss";
+@import "layout/_main_content.scss";
+@import "layout/_footer.scss";
 @import "layout/_mediaquerie.scss";
